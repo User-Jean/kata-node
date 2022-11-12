@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "kata-test",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "scripts": {
+    "start": "echo Helloworld",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
