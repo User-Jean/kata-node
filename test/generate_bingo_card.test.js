@@ -1,5 +1,6 @@
 import { delimiters, generateBingoCards } from "../src/generate_bing_cards";
 
+
 describe ('Generate bingo card', () => {
   const arrayBidimensional = generateBingoCards()
   test('25 uniques spaces', () => {
@@ -9,11 +10,10 @@ describe ('Generate bingo card', () => {
         set.add(number);
       })
     })
-    expect(set.size).toBe(25);
+    expect(set.size).toBe(25);  
   })
   
   test('Columnas only contains numbers between LowerBounded upperBounded',() => {
-    
     let row = 1, column = 1;
     arrayBidimensional.forEach(array => {
       column = 1;

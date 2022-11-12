@@ -7,12 +7,21 @@ export const delimiters = {
 }
 
 export function generateBingoCards() {
-  const bingoCard = [
-    [1, 2, 3, 4, 5], 
-    [16, 16, 16, 16, 16], 
-    [30, 31, 'FREE', 31, 31], 
-    [46, 46, 46, 46, 46], 
-    [61, 61, 61, 61, 61]
-  ]
+  const bingoCard = [];
+  let row;
+  for (let i = 0; i <5; i++){
+    row = [];
+    for(let j = 0; j <5; j++) {
+      let number;
+      do{
+        let max = delimiters[i + 1].lowerBound;
+        let min = delimiters[i + 1].upperBound;
+        number = Math.floor(Math.random() * (max -min + 1) + min);
+      } while(row.find(e => e === number));
+      row.push(number);
+    }
+    bingoCard.push(row);
+  }
+  bingoCard[2][2] = 'FREE';
   return bingoCard;
 }
